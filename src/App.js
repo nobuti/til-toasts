@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @jsx jsx */
+import {Fragment} from 'react'
+import {Global, jsx, css} from '@emotion/core'
+
+import {reset} from './util/reset'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+    <Global styles={reset} />
+    <section css={css`
+      height: 100vh;
+      background-color: #2548f5;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}>Wadus</section>
+    </Fragment>
   );
 }
 

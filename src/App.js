@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { Fragment, useEffect } from 'react'
+import { useEffect } from 'react'
 import { Global, jsx, css } from '@emotion/core'
 
 import { reset } from './util/reset'
+import { ToastProvider } from './components/toastContext'
+import Card from './components/Card'
 
 function App() {
   useEffect(() => {
@@ -15,7 +17,7 @@ function App() {
   }, [])
 
   return (
-    <Fragment>
+    <ToastProvider>
       <Global styles={reset} />
       <section
         css={css`
@@ -27,9 +29,9 @@ function App() {
           align-items: center;
         `}
       >
-        Wadus
+        <Card />
       </section>
-    </Fragment>
+    </ToastProvider>
   )
 }
 

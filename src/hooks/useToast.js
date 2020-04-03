@@ -19,6 +19,7 @@ const useToast = () => {
   }
 
   return {
+    toasts,
     addToast,
     removeToast,
   }

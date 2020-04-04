@@ -22,7 +22,7 @@ export const factory = (type) => {
     virus: {
       color: '#f5eb25',
       title: 'Oh no',
-      message: 'Take a break and stay safe!',
+      message: 'Take a break, make some soup and stay safe!',
     },
     lego: {
       color: '#e425f5',

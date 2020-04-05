@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 import { jsx, css } from '@emotion/core'
 
 import { useToastContext } from './toastContext'
@@ -45,10 +45,14 @@ const Toast = ({ color, title, message, toast }) => {
   const { removeToast } = useToastContext()
   const remove = useCallback(() => removeToast(toast), [removeToast, toast])
 
+  const eta = useRef(TTL)
+
   useEffect(() => {
-    const timeout = setTimeout(remove, TTL)
+    const now = new Date()
+    const timeout = setTimeout(remove, eta.current)
 
     return () => {
+      eta.current = new Date() - now
       clearTimeout(timeout)
     }
   }, [remove])

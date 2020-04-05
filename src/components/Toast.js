@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { useContext } from 'react'
+import { useContext, useEffect, useCallback } from 'react'
 import { jsx, css } from '@emotion/core'
 
 import ToastContext from './toastContext'
@@ -39,8 +39,19 @@ export const factory = (type) => {
   return settings[type]
 }
 
+const TTL = 5 * 1000
+
 const Toast = ({ color, title, message, toast }) => {
   const { removeToast } = useContext(ToastContext)
+  const remove = useCallback(() => removeToast(toast), [removeToast, toast])
+
+  useEffect(() => {
+    const timeout = setTimeout(remove, TTL)
+
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [remove])
 
   return (
     <div
@@ -79,7 +90,7 @@ const Toast = ({ color, title, message, toast }) => {
       )}
 
       <Button
-        onClick={() => removeToast(toast)}
+        onClick={remove}
         css={css`
           background: transparent;
           padding: 0;

@@ -5,8 +5,9 @@ const ToastContext = createContext(null)
 
 export const useToastContext = () => useContext(ToastContext)
 export const ToastProvider = ({ children }) => {
-  const toast = useToast()
-  return <ToastContext.Provider value={toast}>{children}</ToastContext.Provider>
+  return (
+    <ToastContext.Provider value={useToast()}>{children}</ToastContext.Provider>
+  )
 }
 
 export default ToastContext

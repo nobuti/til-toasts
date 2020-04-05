@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast should render properly 1`] = `
+<div>
+  <div
+    class="css-m76tdx-Toast"
+  >
+    <h2
+      class="css-1v9h6x6-Toast"
+    >
+      Wadus
+    </h2>
+    <p
+      class="css-1jfni4t-Toast"
+    >
+      wadus wadus!
+    </p>
+    <button
+      class="css-1nw5hej-Toast"
+    >
+      <svg>
+        x.svg
+      </svg>
+    </button>
+  </div>
+</div>
+`;

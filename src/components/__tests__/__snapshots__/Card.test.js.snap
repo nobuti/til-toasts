@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render properly 1`] = `
+<div>
+  <ul
+    class="css-11tbn42-Card"
+  >
+    <li>
+      <button
+        class="css-19tdhsw-Card"
+      >
+        <svg>
+          atom.svg
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-nb07tz-Card"
+      >
+        <svg>
+          ghost.svg
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-15nwj7g-Card"
+      >
+        <svg>
+          virus.svg
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-yfhoj6-Card"
+      >
+        <svg>
+          lego.svg
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        class="css-1fus6uf-Card"
+      >
+        <svg>
+          heart.svg
+        </svg>
+      </button>
+    </li>
+  </ul>
+</div>
+`;

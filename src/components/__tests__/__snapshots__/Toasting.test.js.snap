@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toasting should render properly 1`] = `
+<div>
+  <div
+    class="css-3tqauy-Toasting"
+  >
+    <ul>
+      <li
+        style="opacity: 0; height: 0px;"
+      >
+        <div>
+          <div
+            class="css-m76tdx-Toast"
+          >
+            <h2
+              class="css-1v9h6x6-Toast"
+            >
+              Wadus
+            </h2>
+            <p
+              class="css-1jfni4t-Toast"
+            >
+              Wadus wadus!
+            </p>
+            <button
+              class="css-1nw5hej-Toast"
+            >
+              <svg>
+                x.svg
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li
+        style="opacity: 0; height: 0px;"
+      >
+        <div>
+          <div
+            class="css-10tjqg4-Toast"
+          >
+            <h2
+              class="css-1v9h6x6-Toast"
+            >
+              Bogus
+            </h2>
+            <p
+              class="css-1jfni4t-Toast"
+            >
+              Bogus wadus!
+            </p>
+            <button
+              class="css-1nw5hej-Toast"
+            >
+              <svg>
+                x.svg
+              </svg>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

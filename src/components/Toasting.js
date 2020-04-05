@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import { useTransition, animated } from 'react-spring'
 
-import ToastContext from './toastContext'
+import { useToastContext } from './toastContext'
 import Toast from './Toast'
 
 const Toasting = () => {
-  const { toasts } = useContext(ToastContext)
+  const { toasts } = useToastContext()
   const [refMap] = useState(() => new Map())
 
   const transitions = useTransition(toasts, (toast) => toast.toast, {

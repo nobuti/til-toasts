@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import { useContext } from 'react'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 
-import ToastContext from './toastContext'
+import { useToastContext } from './toastContext'
 import Button from './form/Button'
 import { factory } from './Toast'
 
@@ -27,7 +26,7 @@ const Action = styled(Button)`
 `
 
 const Card = () => {
-  const { addToast } = useContext(ToastContext)
+  const { addToast } = useToastContext()
 
   return (
     <ul

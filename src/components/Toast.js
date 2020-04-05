@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { useContext, useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react'
 import { jsx, css } from '@emotion/core'
 
-import ToastContext from './toastContext'
+import { useToastContext } from './toastContext'
 import Button from './form/Button'
 
 import { ReactComponent as X } from '../assets/x.svg'
@@ -42,7 +42,7 @@ export const factory = (type) => {
 const TTL = 5 * 1000
 
 const Toast = ({ color, title, message, toast }) => {
-  const { removeToast } = useContext(ToastContext)
+  const { removeToast } = useToastContext()
   const remove = useCallback(() => removeToast(toast), [removeToast, toast])
 
   useEffect(() => {

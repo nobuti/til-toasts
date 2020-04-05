@@ -46,17 +46,17 @@ const Toast = ({ color, title, message, toast }) => {
   const remove = useCallback(() => removeToast(toast), [removeToast, toast])
 
   const eta = useRef(TTL)
-  const created = new Date()
 
   useEffect(() => {
     const timeout = setTimeout(remove, eta.current)
+    const created = new Date()
 
     return () => {
       const now = new Date()
       eta.current = eta.current - (now - created)
       clearTimeout(timeout)
     }
-  }, [created, remove, toast])
+  }, [remove, toast])
 
   return (
     <div

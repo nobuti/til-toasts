@@ -34,13 +34,12 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/user-event": "^7.1.2",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
-    "jest-date-mock": "^1.0.8",
     "prettier": "^2.0.2",
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.13.1"
